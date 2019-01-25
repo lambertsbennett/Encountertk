@@ -14,9 +14,10 @@ usage:```[E,T,mean_vol,mean_surf] = encounter_from_PSD(N0,beta,rmin,rmax,r0)```
 
 This gives you the total encounter rate E, average time to encounter T, mean volume of a particle encountered mean_vol, and the mean surface area of a particle encountered mean_surf.
 
-Its important to note that each of these values depends on the size range of particles that you consider and that the encounter rate model only applies when the particle size >> bacterium size.
+It's important to note that each of these values depends on the size range of particles that you consider and that the encounter rate model only applies when the particle size >> bacterium size.
 
 (2) Trying to predict community composition from optical data
+For now it's important that all the file types in the directory are of the same type. Maybe one day we can extend it to multiple file types.
 
 First create a response vector which includes all microbial taxa in your dataset.
 usage: ```resp_vec = generate_taxa_vector(dir, ftype)```
