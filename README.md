@@ -16,4 +16,18 @@ This gives you the total encounter rate E, average time to encounter T, mean vol
 
 Its important to note that each of these values depends on the size range of particles that you consider and that the encounter rate model only applies when the particle size >> bacterium size.
 
+(2) Trying to predict community composition from optical data
+
+First create a response vector which includes all microbial taxa in your dataset.
+usage: ```resp_vec = generate_taxa_vector(dir, ftype)```
+
+Then for each station or observation populate the same vector.
+usage: ```obs_vec = pop_obs_vecs(dir,resp_vec)```
+
+Create input tensor of optical data from optics object.
+usage: ```in_tensor = optics_tensor(optics_df)```
+
+Next use Keras to train a NN.
+usage: ...
+
 If you're keen on collaborating or would really like to see something implemented, please drop me a line! (lambertb@uw.edu)
