@@ -27,10 +27,10 @@ class bb9:
         self.data=pd.read_csv(data_path,sep='\t',header=None)
         #need to structure this specifically for the bb9 .dat file
     
-    def set_dark(self,dark_path):
+    def set_dark(self,dark_path,dark_reading = np.zeros(9)):
         #read the entire file and then return the average dark reading for each channel
-        dark_reading = pd.read_csv(dark_path)
-        self.dark = np.mean(dark_reading)
+        dark_reading = pd.read_csv(dark_path) #I will update this to read only the necessary columns
+        self.dark = np.mean(dark_reading, axis=0)
         #need to structure this specifically for the bb9 .dat file
 
 
