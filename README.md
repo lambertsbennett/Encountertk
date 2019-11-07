@@ -1,4 +1,4 @@
-# Encounter-tk
+# Encountertk
 *under active development
 
 1) Python module to parse and analyse earth sciences optical data as input for encounter rate models.
