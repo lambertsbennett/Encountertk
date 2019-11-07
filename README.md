@@ -1,10 +1,8 @@
 # Encountertk
 *under active development
 
-1) Python module to parse and analyse earth sciences optical data as input for encounter rate models.
-2) Common encounter rate calculations
-
-Emphasis has been placed on instruments that were used in the TARA Oceans expedition, popular optical scattering measurements, analysis of Underwater Vision Profiler data, and on implementing algorithms that derive additional information from satellite data products. 
+Package that helps with common encounter rate calculations and frequent plots.
+ 
 
 Neato use cases:
 
