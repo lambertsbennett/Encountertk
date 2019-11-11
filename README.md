@@ -12,6 +12,7 @@ Dependencies:
 - Matplotlib
 - Seaborn (for plots with better aesthetics)
 
+To install the packaged version directly from PyPI:
 ```
 pip install Encountertk
 ```
