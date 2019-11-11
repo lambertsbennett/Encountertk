@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Encountertk", 
+    name="encountertk", 
     version="0.0.1",
     author="Bennett Lambert",
     author_email="lambertb@uw.edu",

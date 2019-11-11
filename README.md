@@ -1,4 +1,4 @@
-# Encountertk
+# encountertk
 Encounter toolkit. (Under active development)
 
 **Encountertk is a python package that carries out common encounter rate calculations and generates frequently needed plots. This package is heavily focused on marine ecology applications, but could be applied more broadly to encounter processes**
@@ -14,7 +14,7 @@ Dependencies:
 
 To install the packaged version directly from PyPI:
 ```
-pip install Encountertk
+pip install encountertk
 ```
  
 
