@@ -59,7 +59,7 @@ All length units must be in cm for this to work.
 rmin: minimum particle radius to consider (cm)
 rmax: max. particle radius to consider (cm)
 r0: reference particle diameter in psd power law (cm)
-B: psd slope (cm^-4)
+B: absolute value of psd slope (cm^-4)
 D: Diffusivity of bacterium (cm^2 s^-1)
 v: kinematic viscosity of water (roughly 0.01 cm^2 s^-1)
 Returns: search time in seconds.
