@@ -10,7 +10,8 @@ Dependencies:
 - NumPy
 - Pandas
 - Matplotlib
-- Seaborn (for plots with better aesthetics)
+- Seaborn
+- SymPy 
 
 To install the packaged version directly from PyPI:
 ```
