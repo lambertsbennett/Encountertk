@@ -77,9 +77,9 @@ Returns: mean volume encountered in um
 '''
 
 def mean_vol_encountered(rmin,rmax,D,r0,N0,B,v):
-        expr = ((16/3)*N0*D*(np.pi**2)*(r**4)*(r/r0)**(-B)*(1+0.619*(((0.13*r**0.26)*r/v)**0.412)*(v/D)**(1/3))
-        mean_vol = integrate(expr,(r,rmin,rmax))
-        return mean_vol
+        expr_v = ((16/3)*N0*D*(np.pi**2)*(r**4)*(r/r0)**(-B))*(1+0.619*(((0.13*r**0.26)*r/v)**0.412)*(v/D)**(1/3))
+        mean_v = integrate(expr_v,(r,rmin,rmax))
+        return mean_v
 
 if __name__ == "__main__":
     print("Here's a toy example with two populations")
