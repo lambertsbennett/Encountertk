@@ -1,18 +1,29 @@
 '''
 Module to carry out common encounter rate calculations and modeling
-'''
 
-import numpy as np
-
-'''
-This file contains classes and functions related to calculating encounter rates and in the
-particle section, parameters associated with particle spectra.
+This file is separated broadly into two sections. The first is for basic encounter
+rate modeling. This being between predator-prey, cells and viruses, bacteria and particles.
+Most of the heavy lifting is done through the EncounterModel class. In order to effectively use this class
+you must know the encounter rate kernel for your process of interest. There are a number of kernels
+supplied in the kernels.py module and the Kernel class allows you to simply define your own
+symbolically. If that is more complex than desired, custom numeric values can be input directly.
 
 The class EncounterModel can serve as a base class to build increasingly complex encounter rate models
 and the values it's methods return are in a format that plays nicely with etk's associated plotting functions.
 
+The second portion of this file is related to microbial foraging in marine particle landscapes. This code is
+the basis for the analyses carried out in Lambert et al. 2019 (L&O: Letters) and Lambert et al. 2020 (Currently on
+the biorxiv). The functions provided allow calculation of specific total encounter rate between a microbe and particles
+in a landscape defined by the particle slope spectrum and the power law coefficient. Example data and usage of these functions are
+presented in the Examples folder.
+
 Here and everywhere when making use of oceanographic data you need to be absolutely certain that the units are consistent.
 Everywhere possible I've tried to specifiy the units needed for constants and variables '''
+
+'''
+
+import numpy as np
+
 
 class EncounterModel():
     ''' Base class for encounter rate model.
@@ -32,9 +43,13 @@ class EncounterModel():
     def get_kernel(self):
         return self.kernel
 
-    def calc_encounter(self):
-        ''' Calculate the encounter rate between two populations. The concentrations must
-        be in list format. The encounter rate is returned as a list of arrays'''
+    def calc_encounter_range(self):
+        ''' Calculate the encounter rate between two populations across varying
+        cell concentrations. The concentrations must be in list format.
+        The encounter rate is returned as a list of arrays.
+        This can be a useful function to explore encounter rates across permutations of
+        cell concentrations'''
+
         if len(self.pop1c) == 1:
             assert (self.pop1c[0] != 0), "Requires non-zero concentrations"
         elif len(self.pop2c) == 1:
@@ -42,6 +57,14 @@ class EncounterModel():
 
         self.e_rate = [self.kernel*np.multiply(self.pop2c,p1) for p1 in self.pop1c]
         return self.e_rate
+
+    def calc_encounter_pairwise(self):
+        ''' Calculate encounter row-wise. Useful in the case of discrete samples with
+        defined cell concentrations. E.g. oceanographic station data.
+        '''
+        self.e_rate = self.kernel*np.multiply(self.pop1c,self.pop2c)
+        return self.e_rate
+
 
 # ------------------------------------------------------------------------------------
 '''

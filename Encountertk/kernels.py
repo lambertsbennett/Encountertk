@@ -16,6 +16,10 @@ def diffusive_kernel(Di,Dj,ri,rj):
     return B_diff
 
 
+'''
+Settling velocities can be calculated using the calculate_stokes_velocity function in _utils.py.
+Be aware the utility function requires length scales to be in m'''
+
 def differential_settling_kernel(ri,ui,uj):
     ''' Encounter rate kernel for differential settling.
     Requires: radius of smaller particle/cell (ri), settling velocity of small particles (ui),
