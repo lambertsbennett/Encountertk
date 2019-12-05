@@ -20,10 +20,8 @@ presented in the Examples folder.
 Here and everywhere when making use of oceanographic data you need to be absolutely certain that the units are consistent.
 Everywhere possible I've tried to specifiy the units needed for constants and variables '''
 
-'''
 
 import numpy as np
-
 
 class EncounterModel():
     ''' Base class for encounter rate model.
@@ -107,4 +105,4 @@ def mean_vol_encountered(rmin,rmax,D,r0,N0,B,v):
 if __name__ == "__main__":
     print("Here's a toy example with two populations")
     model = EncounterModel(kernel=1,pop1c = [1,5,10],pop2c = [1,5,10])
-    e = model.calc_encounter()
+    e = model.calc_encounter_range()
