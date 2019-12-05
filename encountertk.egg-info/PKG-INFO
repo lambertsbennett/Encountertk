@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: encountertk
+Version: 0.0.1
+Summary: Encounter rate modelling in python
+Home-page: https://github.com/lambertsbennett/Encountertk
+Author: Bennett Lambert
+Author-email: lambertb@uw.edu
+License: UNKNOWN
+Description: # encountertk
+        Encounter toolkit. (Under active development)
+        
+        **Encountertk is a python package that carries out common encounter rate calculations and generates frequently needed plots. This package is heavily focused on marine ecology applications, but could be applied more broadly to encounter processes**
+        
+        ### Install Encountertk!
+        Encountertk is written for >= Python 3.6.
+        
+        Dependencies:
+        - NumPy
+        - Pandas
+        - Matplotlib
+        - Seaborn
+        - SymPy 
+        
+        To install the packaged version directly from PyPI:
+        ```
+        pip install encountertk
+        ```
+         
+        
+        
+        
+        If you're keen on collaborating or would really like to see something implemented, please drop me a line! (lambertb@uw.edu)
+        Or feel free to open a pull request.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intented Audience :: Scientists
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

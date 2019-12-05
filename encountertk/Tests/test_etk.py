@@ -1,5 +1,5 @@
 from pytest import mark
-import encountertk
+import Encountertk
 
 @mark.EncounterModel
 class EncounterModelTest:
