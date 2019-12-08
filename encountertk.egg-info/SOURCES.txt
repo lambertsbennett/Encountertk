@@ -9,5 +9,5 @@ encountertk.egg-info/PKG-INFO
 encountertk.egg-info/SOURCES.txt
 encountertk.egg-info/dependency_links.txt
 encountertk.egg-info/top_level.txt
-encountertk/Tests/__init__.py
-encountertk/Tests/test_etk.py
+tests/__init__.py
+tests/test_etk.py

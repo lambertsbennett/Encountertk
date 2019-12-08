@@ -6,12 +6,12 @@ from encountertk.e_model import EncounterModel, ps_encounter, mean_vol_encounter
 @mark.modelclass
 class TestEncounterModel:
 
-    def test_get_kernel(self):
-        self.model = EncounterModel(kernel=1,pop2c=[1],pop1c=[1])
+    def test_get_kernel(self,EModel):
+        self.model = EModel
         assert self.model.get_kernel() == 1
 
-    def test_set_kernel(self):
-        self.model = EncounterModel(kernel=1,pop2c=[1],pop1c=[1])
+    def test_set_kernel(self,EModel):
+        self.model = EModel
         self.model.set_kernel(2.5)
         assert self.model.get_kernel() == 2.5
 
