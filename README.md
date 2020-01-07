@@ -11,13 +11,14 @@ Dependencies:
 - Pandas
 - Matplotlib
 - Seaborn
-- SymPy 
+- SymPy
 
-To install the packaged version directly from PyPI:
+To install the package locally, clone and run:
 ```
-pip install encountertk
+cd Encountertk
+pip install -e .
 ```
- 
+
 
 
 

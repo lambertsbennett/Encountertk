@@ -1,8 +1,6 @@
 from pytest import mark
 from encountertk.e_model import EncounterModel, ps_encounter, mean_vol_encountered
 
-
-
 @mark.modelclass
 class TestEncounterModel:
 
@@ -31,8 +29,10 @@ class TestEncounterModel:
 
 @mark.particles
 def test_ps_encounter():
+    res = ps_encounter(rmin,rmax,D,r0,N0,B,v)
     assert True
 
 @mark.particles
 def test_mean_vol_encountered():
+    res = mean_vol_encountered(rmin=0.1,rmax,D,r0,N0,B,v)
     assert True
