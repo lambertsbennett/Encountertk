@@ -66,8 +66,8 @@ class Kernel():
         '''
         To establish the class, input the variable representations you'll use to
         define the kernel.
-        '''
         Example: K = Kernel(sym='x,y,z')
+        '''
         self.sym = symbols(sym)
 
     def set_kernel(self,expression):
