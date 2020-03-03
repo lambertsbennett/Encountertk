@@ -4,7 +4,7 @@ kernel.
 '''
 
 from numpy import pi, abs
-from _utils import calculate_diffusivity_rw
+from utils import calculate_diffusivity_rw
 
 def diffusive_kernel(Di,Dj,ri,rj):
     ''' Encounter rate kernel for diffusive encounter.
