@@ -12,8 +12,7 @@ The class EncounterModel can serve as a base class to build increasingly complex
 and the values it's methods return are in a format that plays nicely with etk's associated plotting functions.
 
 The second portion of this file is related to microbial foraging in marine particle landscapes. This code is
-the basis for the analyses carried out in Lambert et al. 2019 (L&O: Letters) and Lambert et al. 2020 (Currently on
-the biorxiv). The functions provided allow calculation of specific total encounter rate between a microbe and particles
+the basis for the analyses carried out in Lambert et al. 2019 (L&O: Letters) and Lambert et al. (In Prep.). The functions provided allow calculation of specific total encounter rate between a microbe and particles
 in a landscape defined by the particle slope spectrum and the power law coefficient. Example data and usage of these functions are
 presented in the Examples folder.
 
